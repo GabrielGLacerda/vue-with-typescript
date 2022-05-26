@@ -1,15 +1,29 @@
-<script setup lang="ts">
-import { ref } from 'vue'
-  const name = ref('Link')
-  const age = ref(30)
-  const weapon = ref('sword')
-</script>
-
 <template>
   <div class="app">
-    {{name}} - {{age}} - {{weapon}}
+    <JobsList :jobs="jobs"/>
   </div>
 </template>
+
+<script setup lang="ts">
+import type Job from "./types/Job";
+import { ref } from "vue";
+import JobsList from "./components/JobsList.vue";
+
+const jobs = ref<Job[]>([
+  {
+    title: "farm worker",
+    location: "lon lon ranch",
+    salary: 30000,
+    id: 1,
+  },
+  {
+    title: "Warrior",
+    location: "basement",
+    salary: 5000,
+    id: 2,
+  },
+]);
+</script>
 
 <style>
 </style>
