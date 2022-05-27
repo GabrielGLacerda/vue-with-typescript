@@ -16,15 +16,8 @@
 
 <script setup lang="ts">
 import type Job from '@/types/Job'
-// import type { PropType } from 'vue';
-// const jobs = defineProps({
-//   jobs: {
-//     required: true,
-//     type: Array as PropType<Job[]>
-//   }
-// })
 
-const jobs = defineProps<{
+const props = defineProps<{
   jobs: Array<Job>
 }>()
 </script>
